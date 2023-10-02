@@ -11,7 +11,8 @@ const geocode=(address,callback)=>{
        }else{
          callback(undefined,{
             Longitude: response.body.features[0].center[0],
-            Latitude: response.body.features[0].center[1]
+            Latitude: response.body.features[0].center[1],
+            Location: response.body.features[0].place_name
          })
        }
 
