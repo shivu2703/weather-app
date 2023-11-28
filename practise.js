@@ -8,9 +8,10 @@ request({url:url, json:true},(error,response)=>{
 }) 
 
 //geocoding api implementation
-
 const geocodeurl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/kanpur.json?access_token=pk.eyJ1Ijoic2hpdnUyNzAzIiwiYSI6ImNsbjR0Y3MycDA1MjEyanA5Nzh0cmRlZWIifQ.mTz8XDYGPOQNRHw2rzdvnQ&limit=1'
 
 request({url:geocodeurl,json:true},(error,response)=>{
-    console.log("Longitude: "+ response.body.features[0].center[0]+" latitude :"+response.body.features[0].center[1] )
+    const Longitude = response.body.features[0].center[0]
+    const latitude = response.body.features[0].center[1]
+    console.log("Longitude: "+Longitude +", Latitude :"+latitude )
 })
