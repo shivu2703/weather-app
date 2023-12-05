@@ -39,11 +39,10 @@ const geocode=(address, callback)=>{
         } else if(response.body.features.length === 0){
             callback('unable to get the location, try another search!!', undefined)
         }else{
-            const Longitude = response.body.features[0].center[0]
-            const latitude = response.body.features[0].center[1]
-            callback(undefined,data={
-                Longitude: Longitude,
-                latitude: latitude
+            callback(undefined,{
+                Longitude: response.body.features[0].center[0],
+                latitude: response.body.features[0].center[1],
+                Place: response.body.features[0].place_name
             })
         }
    })
