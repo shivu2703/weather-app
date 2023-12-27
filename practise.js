@@ -17,7 +17,8 @@ const geocode=(address, callback)=>{
         }
    })
 }
-//hello 
+//forcast
+///kojojijihu
 const forecast = (latitude,longitude,callback)=>{
        
     const url ='http://api.weatherstack.com/current?access_key=c58c324b7d694f3367fd99985322f556&query='+latitude+','+longitude+'&units=f'
